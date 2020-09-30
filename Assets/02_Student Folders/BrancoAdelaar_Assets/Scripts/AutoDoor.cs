@@ -36,9 +36,9 @@ public class AutoDoor : MonoBehaviour
 		}
 		
 		if(closing && timer > 0f) {
-			door1.Translate(Vector3.forward * Time.deltaTime * speed);
-			door2.Translate(-Vector3.forward * Time.deltaTime * speed);
-			timer -= Time.deltaTime;
+			door1.Translate(Vector3.forward * Time.deltaTime * 0.5f * speed);
+			door2.Translate(-Vector3.forward * Time.deltaTime * 0.5f * speed);
+			timer -= 2*Time.deltaTime;
 		} else if (closing && timer <= 0f) {
 			closing = false;
 			timer = timerLength;
