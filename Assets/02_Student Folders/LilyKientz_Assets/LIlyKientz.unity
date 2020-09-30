@@ -18199,7 +18199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500168960}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &1052713583
 MeshCollider:
@@ -23388,7 +23388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500168960}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!64 &1222739951
 MeshCollider:
@@ -31148,12 +31148,12 @@ Transform:
   m_LocalPosition: {x: 10, y: 4.5, z: 31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1222739950}
+  - {fileID: 1824210544}
   - {fileID: 2063363997}
+  - {fileID: 1222739950}
   - {fileID: 1721104977}
   - {fileID: 1711638146}
   - {fileID: 1052713582}
-  - {fileID: 1824210544}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31165,7 +31165,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500168959}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5
@@ -31182,6 +31182,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc5100b6d994184fa49b4885c3a9daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  top: {fileID: 1824210544}
+  bottom: {fileID: 0}
+  topleft: {fileID: 0}
+  topright: {fileID: 0}
+  bottomleft: {fileID: 0}
+  bottomright: {fileID: 0}
+  hitbox: {fileID: 1500168961}
 --- !u!1001 &1502102617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36053,7 +36061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500168960}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!64 &1711638147
 MeshCollider:
@@ -36422,7 +36430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500168960}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!64 &1721104978
 MeshCollider:
@@ -40008,7 +40016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500168960}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &1824210545
 MeshCollider:

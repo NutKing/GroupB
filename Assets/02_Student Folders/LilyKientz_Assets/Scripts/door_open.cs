@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class hiddenroom : MonoBehaviour
+public class door_open : MonoBehaviour
 {
     public float speed = 1f;
     bool isOpen = false;
@@ -32,10 +32,15 @@ public class hiddenroom : MonoBehaviour
     {
         if (isOpen && timer > 0f)
         {
-            hatch1.Translate(Vector3.left * Time.deltaTime * speed);
-            hatch2.Translate(Vector3.right * Time.deltaTime * speed);
-            lift.Translate(Vector3.up * Time.deltaTime * speed * 2);
-            robot.Translate(Vector3.up * Time.deltaTime * speed * 2);
+           // top.Translate(Vector3.left * Time.deltaTime * speed);
+            top.Translate(Vector3.forward * Time.deltaTime * speed);
+            bottom.Translate(Vector3.forward * Time.deltaTime * speed);
+            bottomleft.Translate(Vector3.left * Time.deltaTime * speed);
+            bottomright.Translate(Vector3.right * Time.deltaTime * speed);
+            topleft.Translate(Vector3.left * Time.deltaTime * speed);
+            topright.Translate(Vector3.right * Time.deltaTime * speed);
+
+
             timer -= Time.deltaTime;
         }
     }
