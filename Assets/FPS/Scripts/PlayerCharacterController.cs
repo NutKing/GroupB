@@ -117,6 +117,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     const float k_JumpGroundingPreventionTime = 0.2f;
     const float k_GroundCheckDistanceInAir = 0.07f;
+    public bool isIn = false;
+    public int dumbcounter = 0;
 
     void Start()
     {
@@ -147,6 +149,13 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
+        if(isIn){
+          dumbcounter++;
+          if(dumbcounter == 50){
+          m_Health.TakeDamage(1, null);
+          dumbcounter = 0;
+          }
+        }
         // check for Y kill
         if(!isDead && transform.position.y < killHeight)
         {
@@ -195,8 +204,18 @@ public class PlayerCharacterController : MonoBehaviour
       if (other.tag == "Slow"){
           maxSpeedOnGround = 5;
           maxSpeedInAir = 5;
+          isIn = false;
+      }
+      else if (other.tag == "Fast"){
+          maxSpeedOnGround = 20;
+          maxSpeedInAir = 20;
+          isIn = false;
+      }
+      else if(other.tag == "Pain"){
+          isIn = true;
       }
       else{
+        isIn = false;
         maxSpeedOnGround = 10f;
         maxSpeedInAir = 10f;
       }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Slow
+  - Fast
+  - Pain
   layers:
   - Default
   - TransparentFX
