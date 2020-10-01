@@ -101,7 +101,7 @@ public class PlayerCharacterController : MonoBehaviour
             return 1f;
         }
     }
-        
+
     Health m_Health;
     PlayerInputHandler m_InputHandler;
     CharacterController m_Controller;
@@ -188,6 +188,18 @@ public class PlayerCharacterController : MonoBehaviour
         UpdateCharacterHeight(false);
 
         HandleCharacterMovement();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+      if (other.tag == "Slow"){
+          maxSpeedOnGround = 5;
+          maxSpeedInAir = 5;
+      }
+      else{
+        maxSpeedOnGround = 10f;
+        maxSpeedInAir = 10f;
+      }
     }
 
     void OnDie()
@@ -354,13 +366,13 @@ public class PlayerCharacterController : MonoBehaviour
         return Vector3.Angle(transform.up, normal) <= m_Controller.slopeLimit;
     }
 
-    // Gets the center point of the bottom hemisphere of the character controller capsule    
+    // Gets the center point of the bottom hemisphere of the character controller capsule
     Vector3 GetCapsuleBottomHemisphere()
     {
         return transform.position + (transform.up * m_Controller.radius);
     }
 
-    // Gets the center point of the top hemisphere of the character controller capsule    
+    // Gets the center point of the top hemisphere of the character controller capsule
     Vector3 GetCapsuleTopHemisphere(float atHeight)
     {
         return transform.position + (transform.up * (atHeight - m_Controller.radius));
