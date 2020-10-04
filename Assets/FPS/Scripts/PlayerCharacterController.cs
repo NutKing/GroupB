@@ -213,6 +213,8 @@ public class PlayerCharacterController : MonoBehaviour
       }
       else if(other.tag == "Pain"){
           isIn = true;
+          maxSpeedOnGround = 10f;
+          maxSpeedInAir = 10f;
       }
       else{
         isIn = false;
