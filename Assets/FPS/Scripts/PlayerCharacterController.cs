@@ -205,21 +205,41 @@ public class PlayerCharacterController : MonoBehaviour
           maxSpeedOnGround = 5;
           maxSpeedInAir = 5;
           isIn = false;
+          fallDamageAtMinSpeed = 10f;
+          fallDamageAtMaxSpeed = 50f;
+          jumpForce = 9f;
       }
       else if (other.tag == "Fast"){
           maxSpeedOnGround = 20;
           maxSpeedInAir = 20;
           isIn = false;
+          fallDamageAtMinSpeed = 10f;
+          fallDamageAtMaxSpeed = 50f;
+          jumpForce = 9f;
       }
       else if(other.tag == "Pain"){
           isIn = true;
           maxSpeedOnGround = 10f;
           maxSpeedInAir = 10f;
+          fallDamageAtMinSpeed = 10f;
+          fallDamageAtMaxSpeed = 50f;
+          jumpForce = 9f;
+      }
+      else if (other.tag == "Jump"){
+          maxSpeedOnGround = 10f;
+          maxSpeedInAir = 10f;
+          isIn = false;
+          fallDamageAtMinSpeed = 0;
+          fallDamageAtMaxSpeed = 0;
+          jumpForce = 25;
       }
       else{
         isIn = false;
         maxSpeedOnGround = 10f;
         maxSpeedInAir = 10f;
+        fallDamageAtMinSpeed = 10f;
+        fallDamageAtMaxSpeed = 50f;
+        jumpForce = 9f;
       }
     }
 
