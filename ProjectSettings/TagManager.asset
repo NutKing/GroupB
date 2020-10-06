@@ -7,6 +7,7 @@ TagManager:
   - Slow
   - Fast
   - Pain
+  - Random
   layers:
   - Default
   - TransparentFX

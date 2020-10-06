@@ -201,7 +201,11 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-      if (other.tag == "Slow"){
+      int frenchexit = 0;
+      if (other.tag == "Random"){
+          frenchexit = Random.Range(1,4);
+      }
+      if (other.tag == "Slow" || frenchexit == 1){
           maxSpeedOnGround = 5;
           maxSpeedInAir = 5;
           isIn = false;
@@ -209,7 +213,7 @@ public class PlayerCharacterController : MonoBehaviour
           fallDamageAtMaxSpeed = 50f;
           jumpForce = 9f;
       }
-      else if (other.tag == "Fast"){
+      else if (other.tag == "Fast" || frenchexit == 2){
           maxSpeedOnGround = 20;
           maxSpeedInAir = 20;
           isIn = false;
@@ -217,21 +221,13 @@ public class PlayerCharacterController : MonoBehaviour
           fallDamageAtMaxSpeed = 50f;
           jumpForce = 9f;
       }
-      else if(other.tag == "Pain"){
+      else if(other.tag == "Pain" || frenchexit == 3){
           isIn = true;
           maxSpeedOnGround = 10f;
           maxSpeedInAir = 10f;
           fallDamageAtMinSpeed = 10f;
           fallDamageAtMaxSpeed = 50f;
           jumpForce = 9f;
-      }
-      else if (other.tag == "Jump"){
-          maxSpeedOnGround = 10f;
-          maxSpeedInAir = 10f;
-          isIn = false;
-          fallDamageAtMinSpeed = 0;
-          fallDamageAtMaxSpeed = 0;
-          jumpForce = 25;
       }
       else{
         isIn = false;
