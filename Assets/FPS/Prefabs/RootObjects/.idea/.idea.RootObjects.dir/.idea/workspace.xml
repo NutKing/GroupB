@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../Scripts/MeshCombineUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../02_Student Folders/BrancoAdelaar_Assets/Scripts/AutoDoor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1iXmAEPzPDmL13Xhmo0U3s8cbXE" />
@@ -32,7 +33,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602062170931</updated>
-      <workItem from="1602062178992" duration="1385000" />
+      <workItem from="1602062178992" duration="1386000" />
     </task>
     <servers />
   </component>
