@@ -9,7 +9,7 @@ public class ElevatorDown : MonoBehaviour
     private bool goDown = false;
     private bool playOnce = true;
 
-    private float timer = 20f;
+    private float timer = 17.4f;
 
     public float speed = 2f;
 
