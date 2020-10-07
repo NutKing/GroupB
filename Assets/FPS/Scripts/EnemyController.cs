@@ -299,7 +299,7 @@ public class EnemyController : MonoBehaviour
 
     public void SetNavDestination(Vector3 destination)
     {
-        if (m_NavMeshAgent)
+        if (m_NavMeshAgent && m_NavMeshAgent.enabled)
         {
             m_NavMeshAgent.SetDestination(destination);
         }

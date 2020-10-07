@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class hiddenroom : MonoBehaviour
 {
     public float speed = 1f;
     bool isOpen = false;
-    float timer;
+    bool isOnNav = false;
+    float timer = 1f;
     float timerLength = 1f;
 
     public Transform hatch1;
@@ -15,12 +17,13 @@ public class hiddenroom : MonoBehaviour
     public Transform lift;
     public Collider hitbox;
     public Transform robot;
+    public GameObject robot1;
 
     
     // Start is called before the first frame update
     void Start()
     {
-
+        robot1.GetComponent<NavMeshAgent>().enabled = false;
     }
 
     // Update is called once per frame
@@ -33,6 +36,11 @@ public class hiddenroom : MonoBehaviour
             lift.Translate(Vector3.up * Time.deltaTime * speed * 2);
             robot.Translate(Vector3.up * Time.deltaTime * speed * 2);
             timer -= Time.deltaTime;
+        }
+        if (timer <= 0f && isOnNav == false) 
+        { 
+            robot1.GetComponent<NavMeshAgent>().enabled = true;
+            isOnNav = true;
         }
     }
 
