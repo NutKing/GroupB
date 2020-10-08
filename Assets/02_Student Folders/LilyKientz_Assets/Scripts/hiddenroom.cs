@@ -31,15 +31,21 @@ public class hiddenroom : MonoBehaviour
     {
         if (isOpen && timer > 0f) 
         { 
-            hatch1.Translate(Vector3.left * Time.deltaTime * speed);
-            hatch2.Translate(Vector3.right * Time.deltaTime * speed);
-            lift.Translate(Vector3.up * Time.deltaTime * speed * 2);
-            robot.Translate(Vector3.up * Time.deltaTime * speed * 2);
-            timer -= Time.deltaTime;
+             hatch1.Translate(Vector3.left * Time.deltaTime * speed);
+             hatch2.Translate(Vector3.right * Time.deltaTime * speed);
+             lift.Translate(Vector3.up * Time.deltaTime * speed * 2);
+             if (robot) { 
+                robot.Translate(Vector3.up * Time.deltaTime * speed * 2);
+             }
+             timer -= Time.deltaTime;
+
         }
         if (timer <= 0f && isOnNav == false) 
-        { 
-            robot1.GetComponent<NavMeshAgent>().enabled = true;
+        {
+            if (robot1)
+            {
+                robot1.GetComponent<NavMeshAgent>().enabled = true;
+            }
             isOnNav = true;
         }
     }
