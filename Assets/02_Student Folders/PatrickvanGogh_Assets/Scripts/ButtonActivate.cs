@@ -24,11 +24,7 @@ public class ButtonActivate : MonoBehaviour
         Door2DefPos = Door2.localPosition;
         z += Door1.localPosition.z;
     }
-    void update() 
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        opening = true;
-    } 
+
     void Update()
     {
         if (opening && Door1.localPosition.z < z)
@@ -40,6 +36,11 @@ public class ButtonActivate : MonoBehaviour
         {
             opening = false;
             // soundEffect.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            opening = true;
         }
 
 
