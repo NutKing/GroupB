@@ -162,10 +162,14 @@
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "editor.selectMode",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "value": "{\"m_Value\":129}"
 =======
                 "value": "{\"m_Value\":2}"
 >>>>>>> parent of 178110c... Update Settings.json
+=======
+                "value": "{\"m_Value\":8}"
+>>>>>>> parent of c392d5d... Update Settings.json
             },
             {
                 "type": "UnityEngine.ProBuilder.PivotLocation, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
