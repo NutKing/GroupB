@@ -26,7 +26,6 @@ public class AutoDoorPatrick : MonoBehaviour
 
     //public AudioSource soundeffect;
 
-    // Above is the general execution of the auto door opening.
     void start()
     {
         AutoDoorTrigger = GetComponent<Collider>();
