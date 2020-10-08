@@ -36341,17 +36341,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: af6bc3e69c9a28945b10ba2c0f1ce610,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01192
+      value: 0.01163
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af6bc3e69c9a28945b10ba2c0f1ce610,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00297
+      value: 0.00363
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af6bc3e69c9a28945b10ba2c0f1ce610,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00444
+      value: -0.00407
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af6bc3e69c9a28945b10ba2c0f1ce610,
         type: 3}
@@ -47984,6 +47984,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 495037995}
     m_Modifications:
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1573332745550621928, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_Mesh
@@ -48512,6 +48522,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 495037995}
     m_Modifications:
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1573332745550621928, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_Mesh
@@ -48525,17 +48545,17 @@ PrefabInstance:
     - target: {fileID: 7652772448905810118, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.26
+      value: 33.78
       objectReference: {fileID: 0}
     - target: {fileID: 7652772448905810118, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.82
+      value: -10.976
       objectReference: {fileID: 0}
     - target: {fileID: 7652772448905810118, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.14
+      value: 14.363
       objectReference: {fileID: 0}
     - target: {fileID: 7652772448905810118, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
@@ -50502,6 +50522,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 495037995}
     m_Modifications:
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 242851073955437449, guid: 009a303f1507d3b4b8eb67647a4cba2c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1573332745550621928, guid: 009a303f1507d3b4b8eb67647a4cba2c,
         type: 3}
       propertyPath: m_Mesh
