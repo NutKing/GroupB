@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class areaActivator : MonoBehaviour
+public class areaActivator_noTransform : MonoBehaviour
 {
     private bool inRange2 = false;
     private bool activated = false;
     private bool disabled = false;
     public GameObject Player2;
     public PlayerCharacterController PlayerCC;
-    public Transform stairs;
-    public float timer = 3.6f;
-    public float speed = 3f;
-    public AudioSource sound1;
+    public float timer = 8.6f;
+    // public AudioSource sound1;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,25 +21,23 @@ public class areaActivator : MonoBehaviour
     void Update()
     {
         if (inRange2 && activated && timer > 0f) {
-            stairs.Translate(Vector3.up * Time.deltaTime * speed);
             timer -= Time.deltaTime;
         }
         if (inRange2 && activated && timer <= 0f) {
             activated = false;
             PlayerCC.maxSpeedOnGround = 6f;
             PlayerCC.maxSpeedInAir = 6f;
-            sound1.Stop();
+            // sound1.Play();
+        }
+        if(activated) {
+            PlayerCC.maxSpeedOnGround = 0f;
+            PlayerCC.maxSpeedInAir = 0f;
         }
     }
 
     private void OnTriggerEnter(Collider collision) {
         if(collision.gameObject == Player2) {
             inRange2 = true;
-            if(activated) {
-                sound1.Play();
-                PlayerCC.maxSpeedOnGround = 0f;
-                PlayerCC.maxSpeedInAir = 0f;
-            }
         }
     }
 
