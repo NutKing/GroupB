@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class areaActivator : MonoBehaviour
+public class areaActivator_door : MonoBehaviour
 {
     private bool inRange2 = false;
     private bool activated = false;
     private bool disabled = false;
     public GameObject Player2;
     public PlayerCharacterController PlayerCC;
-    public Transform stairs;
-    public float timer = 3.6f;
+    public Transform door;
+    public float timer = 3f;
     public float speed = 3f;
     public AudioSource sound1;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class areaActivator : MonoBehaviour
     void Update()
     {
         if (inRange2 && activated && timer > 0f) {
-            stairs.Translate(Vector3.up * Time.deltaTime * speed);
+            door.Translate(Vector3.forward * Time.deltaTime * speed);
             timer -= Time.deltaTime;
         }
         if (inRange2 && activated && timer <= 0f) {
