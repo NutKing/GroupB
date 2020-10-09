@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fall : MonoBehaviour
 {
     private bool fall = false;
-
+    private bool disabled = false;
     public AudioSource sound1;
     // Start is called before the first frame update
     void Start()
@@ -18,13 +18,16 @@ public class Fall : MonoBehaviour
     {
         if (fall) {
             transform.Rotate((float)24, (float)40, 0);
-            transform.position -= new Vector3(0, (float)3.5, 0);
+            transform.position -= new Vector3(0, (float)3.9, 0);
             sound1.Play();
             fall = false;
         }
     }
 
     public void setFall() {
-        fall = true;
+        if (!disabled) {
+            fall = true;
+            disabled = true;
+        }
     }
 }

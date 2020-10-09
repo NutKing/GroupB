@@ -229,6 +229,9 @@ public class PlayerCharacterController : MonoBehaviour
           fallDamageAtMaxSpeed = 50f;
           jumpForce = 9f;
       }
+      else if(other.tag == "None"){
+          
+      }
       else{
         isIn = false;
         maxSpeedOnGround = 10f;

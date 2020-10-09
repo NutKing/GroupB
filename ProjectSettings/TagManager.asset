@@ -8,6 +8,7 @@ TagManager:
   - Fast
   - Pain
   - Random
+  - None
   layers:
   - Default
   - TransparentFX
