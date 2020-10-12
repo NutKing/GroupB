@@ -20,7 +20,7 @@ public class Trigger : MonoBehaviour {
     public Vector3 movement = Vector3.down;
 
     // Start is called before the first frame update
-    protected void Start() {
+    private void Start() {
         _health = GetComponent<Health>();
         _health.onDie += () => {
             _moving = true;
@@ -29,7 +29,7 @@ public class Trigger : MonoBehaviour {
     }
 
     // Update is called once per frame
-    protected void Update() {
+    private void Update() {
         if (_moving) {
             Vector3 move = movement * velocity * Time.deltaTime;
 

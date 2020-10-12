@@ -15,13 +15,13 @@ public class TriggerDoor : MonoBehaviour {
     public Vector3 movement = Vector3.down;
 
     // Use this for initialization
-    protected void Start() {
+    private void Start() {
         _trigger = GetComponent<Trigger>();
         _trigger.OnTrigger += () => _moving = true;
     }
 
     // Update is called once per frame
-    protected void Update() {
+    private void Update() {
         if (_moving) {
             Vector3 move = movement * velocity * Time.deltaTime;
 
