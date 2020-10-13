@@ -20,6 +20,7 @@ public class Mist : MonoBehaviour
     }
 
     public void decreaseMist() {
-        main.startLifetime = 10f;
+        Ps.Clear();
+        main.maxParticles = 2;
     }
 }
