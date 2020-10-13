@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Health))]
 public class Destroyable : MonoBehaviour {

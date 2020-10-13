@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(ProjectileBase), typeof(SelectiveDamageable))]
 public class ProjectileDemo : ProjectileStandard {
@@ -14,7 +15,11 @@ public class ProjectileDemo : ProjectileStandard {
         if (!areaOfDamage) {
             SelectiveDamageable damageable = coll.GetComponent<SelectiveDamageable>();
             if (damageable != null) {
-                damageable.InflictDamageBy(damage, false, _base.owner, gameObject);
+                try {
+                    damageable.InflictDamageBy(damage, false, _base.owner, gameObject);
+                } catch (NullReferenceException e) {
+                    Debug.LogWarning($"{e.Source} {e.StackTrace}");
+                }
             }
         }
 

@@ -6,7 +6,7 @@ public class SelectiveDamageable : Damageable {
     public GameObject[] projectiles;
 
     public void InflictDamageBy(float damage, bool explosion, GameObject source, GameObject by) {
-        if (projectiles.All(p => p.GetType() == by.GetType())) {
+        if (projectiles.Any(p => p.GetType() == by.GetType())) {
             base.InflictDamage(damage, explosion, source);
         }
     }

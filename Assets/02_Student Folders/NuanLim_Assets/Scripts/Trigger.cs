@@ -1,44 +1,82 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Assets._02_Student_Folders.NuanLim_Assets.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(Health), typeof(AutoTranslation))]
 public class Trigger : MonoBehaviour {
 
     private Health _health;
+    private ResettableHealth _rhealth;
+    private AutoTranslation _trans;
 
-    private bool _moving;
-    private Vector3 _moved;
+    private bool _waiting;
+    private float _elapsed;
 
     public UnityAction OnTrigger;
 
-    public List<GameObject> keys;
-    public float distance = 1f;
-    public float velocity = 1f;
-    public Vector3 movement = Vector3.down;
+    public AutoTranslation action;
+
+    [HideInInspector]
+    public bool isToggle;
+
+    [HideInInspector]
+    public float resetDelay = 1f;
+
+    public bool IsEnabled { get; private set; }
 
     // Start is called before the first frame update
     private void Start() {
         _health = GetComponent<Health>();
-        _health.onDie += () => {
-            _moving = true;
-            OnTrigger.Invoke();
-        };
+        _health.onDie += OnDie;
+
+        if (isToggle) {
+            _rhealth = GetComponent<ResettableHealth>();
+            if (!_rhealth) {
+                throw new MissingComponentException("Toggleable trigger requires ResettableHealth");
+            }
+        }
+
+        _trans = GetComponent<AutoTranslation>();
+        _trans.OnStopped += StoppedMoving;
     }
 
-    // Update is called once per frame
+    private void OnDie() {
+        if (isToggle) {
+            IsEnabled = !IsEnabled;
+        }
+
+        _health.invincible = true;
+
+        OnTrigger?.Invoke();
+        _trans.Trigger();
+
+        if (action) {
+            if (!isToggle || IsEnabled) {
+                action.Trigger();
+            } else {
+                action.Reset();
+            }
+        }
+    }
+
+    private void StoppedMoving() {
+        if (isToggle) {
+            if (!_trans.IsResetting) {
+                _waiting = true;
+            } else {
+                _health.invincible = false;
+                _rhealth.Revive();
+            }
+        }
+    }
+
     private void Update() {
-        if (_moving) {
-            Vector3 move = movement * velocity * Time.deltaTime;
+        if (_waiting) {
+            _elapsed += Time.deltaTime;
+            if (_elapsed > resetDelay) {
+                _elapsed = 0;
+                _waiting = false;
 
-            keys.ForEach(o => o.transform.Translate(move));
-
-            _moved += move;
-            if (_moved.magnitude > (movement * distance).magnitude) {
-                _moving = false;
-                // Destroying the objects gave a bunch of errors so whatever
+                _trans.Reset();
             }
         }
     }
