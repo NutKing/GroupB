@@ -18,7 +18,7 @@ public class DoorOpen : MonoBehaviour, IDoor
 
     public Transform door1;
     public Transform door2;
-    //public Collider doorSwitch;
+    public AudioSource doorSound;
 	
     // Start is called before the first frame update
     void Start()
@@ -60,10 +60,12 @@ public class DoorOpen : MonoBehaviour, IDoor
 			opening = true;
 			closing = false;
 			isOpen = true;
+			doorSound.Play();
 		} else {
 			closing = true;
 			opening = false;
 			isOpen = false;
+			doorSound.Play();
 		}
 		timer = timerLength;
 		

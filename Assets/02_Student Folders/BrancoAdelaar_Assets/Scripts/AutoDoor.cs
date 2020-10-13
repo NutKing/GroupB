@@ -16,6 +16,7 @@ public class AutoDoor : MonoBehaviour
 	
 	public Transform door1;
     public Transform door2;
+	public AudioSource doorSound;
 	// Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,9 @@ public class AutoDoor : MonoBehaviour
 		}
 		
 		if(closing && timer > 0f) {
-			door1.Translate(Vector3.forward * Time.deltaTime * 0.5f * speed);
-			door2.Translate(-Vector3.forward * Time.deltaTime * 0.5f * speed);
-			timer -= 2*Time.deltaTime;
+			door1.Translate(Vector3.forward * Time.deltaTime * speed);
+			door2.Translate(-Vector3.forward * Time.deltaTime * speed);
+			timer -= Time.deltaTime;
 		} else if (closing && timer <= 0f) {
 			closing = false;
 			timer = timerLength;
@@ -58,6 +59,7 @@ public class AutoDoor : MonoBehaviour
 			isOpen = true;
 			timer = timerLength;
 			opening = true;
+			doorSound.Play();
 		}
 	}
 }
