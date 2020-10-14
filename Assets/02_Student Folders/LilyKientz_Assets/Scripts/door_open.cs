@@ -18,7 +18,7 @@ public class door_open : MonoBehaviour
     public Transform bottomleft;
     public Transform bottomright;
     public Collider hitbox;
-
+    public AudioSource sound;
 
 
     // Start is called before the first frame update
@@ -51,6 +51,7 @@ public class door_open : MonoBehaviour
         {
             isOpen = true;
             timer = timerLength;
+            sound.Play();
         }
     }
 }
