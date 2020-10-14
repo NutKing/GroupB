@@ -12,11 +12,13 @@ public class KeyHolder : MonoBehaviour {
     public void AddKey(Key.KeyType keyType) {
         keyList.Add(keyType);
         Debug.Log("Key picked up" + keyType); 
+        // Key pickup
     }
 
     public void RemoveKey(Key.KeyType keyType) {
         keyList.Remove(keyType);
         Debug.Log("Key used" + keyType);
+        // Key is destroyed
     }
     
     public bool ContainsKey (Key.KeyType keyType) {
