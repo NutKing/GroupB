@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class ButtonActivate : MonoBehaviour
@@ -37,10 +36,11 @@ public class ButtonActivate : MonoBehaviour
             opening = false;
             // soundEffect.Stop();
         }
-
+       
         if (Input.GetKeyDown(KeyCode.E))
         {
             opening = true;
+            Debug.Log("Open Button Door");
         }
 
 

@@ -24,10 +24,24 @@ public class KeyHolder : MonoBehaviour {
     }
    
     private void OnTriggerEnter(Collider collider) {
+        Debug.Log("Enter Door");
         Key key = collider.GetComponent<Key>();
         if (key != null) {
             AddKey(key.GetKeyType());
             Destroy(key.gameObject);
+            // Player picks up key and it's destroyed in-game
         }
+
+        KeyDoor keyDoor = collider.GetComponent<KeyDoor>();
+        if (keyDoor != null)
+        {
+            if (ContainsKey(keyDoor.GetKeyType()))
+            {
+                // Player is holding the relevant key
+                RemoveKey(keyDoor.GetKeyType());
+                keyDoor.OpenDoor();
+            }
+        }
+
     }
 }
