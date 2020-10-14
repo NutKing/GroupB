@@ -10471,7 +10471,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 201258245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc318cb1101143ce93d67512b5b0269, type: 3}
+  m_Script: {fileID: 11500000, guid: 83ec42b98382f4fd485efe3c8f1f311e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &204396927
@@ -92648,22 +92648,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1707347275}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &1884308244
-CircleCollider2D:
+--- !u!65 &1884308244
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884308243}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1884308245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105497,7 +105494,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1661717823, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
       propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661717823, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
+      propertyPath: BypassReverbZones
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661717823, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
