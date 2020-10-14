@@ -39,8 +39,8 @@ public class areaActivator_door : MonoBehaviour
             inRange2 = true;
             if(activated) {
                 sound1.Play();
-                PlayerCC.maxSpeedOnGround = 0f;
-                PlayerCC.maxSpeedInAir = 0f;
+                PlayerCC.maxSpeedOnGround = 0.0001f;
+                PlayerCC.maxSpeedInAir = 0.0001f;
             }
         }
     }

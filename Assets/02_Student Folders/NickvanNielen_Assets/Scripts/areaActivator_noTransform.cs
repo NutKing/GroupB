@@ -30,8 +30,8 @@ public class areaActivator_noTransform : MonoBehaviour
             // sound1.Play();
         }
         if(activated) {
-            PlayerCC.maxSpeedOnGround = 0f;
-            PlayerCC.maxSpeedInAir = 0f;
+            PlayerCC.maxSpeedOnGround = 0.0001f;
+            PlayerCC.maxSpeedInAir = 0.0001f;
         }
     }
 
