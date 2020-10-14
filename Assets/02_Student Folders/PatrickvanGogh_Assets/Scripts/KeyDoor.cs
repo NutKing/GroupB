@@ -11,6 +11,10 @@ public class KeyDoor : MonoBehaviour
         return keyType;
     }
 
+    public Transform Door1;
+    public Transform Door2;
+    public float speed = 5;
+
     public void OpenDoor()
     {
             Door1.Translate(Vector3.forward * Time.deltaTime * speed);
