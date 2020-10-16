@@ -15271,6 +15271,8 @@ GameObject:
   - component: {fileID: 296651822}
   - component: {fileID: 296651821}
   - component: {fileID: 296651823}
+  - component: {fileID: 296651824}
+  - component: {fileID: 296651825}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -15290,7 +15292,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -15426,6 +15428,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &296651824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296651814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &296651825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296651814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 296651814}
+  progress: []
 --- !u!1 &297502343
 GameObject:
   m_ObjectHideFlags: 0
@@ -18745,6 +18782,8 @@ GameObject:
   - component: {fileID: 314553793}
   - component: {fileID: 314553792}
   - component: {fileID: 314553794}
+  - component: {fileID: 314553795}
+  - component: {fileID: 314553796}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -18764,7 +18803,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -18900,6 +18939,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &314553795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314553785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &314553796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314553785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 314553785}
+  progress: []
 --- !u!1001 &321086067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24788,6 +24862,8 @@ GameObject:
   - component: {fileID: 516144120}
   - component: {fileID: 516144119}
   - component: {fileID: 516144121}
+  - component: {fileID: 516144122}
+  - component: {fileID: 516144123}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -24807,7 +24883,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -24943,6 +25019,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &516144122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516144112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &516144123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516144112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 516144112}
+  progress: []
 --- !u!1 &519106026
 GameObject:
   m_ObjectHideFlags: 0
@@ -27511,6 +27622,8 @@ GameObject:
   - component: {fileID: 579537725}
   - component: {fileID: 579537724}
   - component: {fileID: 579537726}
+  - component: {fileID: 579537727}
+  - component: {fileID: 579537728}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -27530,7 +27643,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -27666,6 +27779,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &579537727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579537717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &579537728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579537717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 579537717}
+  progress: []
 --- !u!1 &579863750
 GameObject:
   m_ObjectHideFlags: 0
@@ -30891,6 +31039,8 @@ GameObject:
   - component: {fileID: 610387502}
   - component: {fileID: 610387501}
   - component: {fileID: 610387503}
+  - component: {fileID: 610387504}
+  - component: {fileID: 610387505}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -30910,7 +31060,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31046,6 +31196,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &610387504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610387494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &610387505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610387494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 610387494}
+  progress: []
 --- !u!1 &614112523
 GameObject:
   m_ObjectHideFlags: 0
@@ -41803,6 +41988,8 @@ GameObject:
   - component: {fileID: 820814219}
   - component: {fileID: 820814218}
   - component: {fileID: 820814220}
+  - component: {fileID: 820814221}
+  - component: {fileID: 820814222}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -41822,7 +42009,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -41958,6 +42145,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &820814221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820814211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &820814222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820814211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 820814211}
+  progress: []
 --- !u!1001 &827117279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45692,6 +45914,8 @@ GameObject:
   - component: {fileID: 881737095}
   - component: {fileID: 881737094}
   - component: {fileID: 881737096}
+  - component: {fileID: 881737097}
+  - component: {fileID: 881737098}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -45711,7 +45935,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -45847,6 +46071,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &881737097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881737087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &881737098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881737087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 881737087}
+  progress: []
 --- !u!1001 &918364632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54382,6 +54641,8 @@ GameObject:
   - component: {fileID: 1130741846}
   - component: {fileID: 1130741845}
   - component: {fileID: 1130741852}
+  - component: {fileID: 1130741853}
+  - component: {fileID: 1130741854}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -54443,7 +54704,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -54537,6 +54798,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1130741853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130741843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1130741854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130741843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1130741843}
+  progress: []
 --- !u!43 &1131052950
 Mesh:
   m_ObjectHideFlags: 0
@@ -64579,6 +64875,8 @@ GameObject:
   - component: {fileID: 1316275951}
   - component: {fileID: 1316275950}
   - component: {fileID: 1316275952}
+  - component: {fileID: 1316275953}
+  - component: {fileID: 1316275954}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -64598,7 +64896,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -64734,6 +65032,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1316275953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316275943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1316275954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316275943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1316275943}
+  progress: []
 --- !u!1 &1326217946
 GameObject:
   m_ObjectHideFlags: 0
@@ -64751,6 +65084,8 @@ GameObject:
   - component: {fileID: 1326217954}
   - component: {fileID: 1326217953}
   - component: {fileID: 1326217955}
+  - component: {fileID: 1326217956}
+  - component: {fileID: 1326217957}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -64770,7 +65105,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -64906,6 +65241,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1326217956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326217946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1326217957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326217946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1326217946}
+  progress: []
 --- !u!43 &1326980602
 Mesh:
   m_ObjectHideFlags: 0
@@ -70104,6 +70474,8 @@ GameObject:
   - component: {fileID: 1374032688}
   - component: {fileID: 1374032687}
   - component: {fileID: 1374032689}
+  - component: {fileID: 1374032690}
+  - component: {fileID: 1374032691}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -70123,7 +70495,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -70259,6 +70631,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1374032690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374032680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1374032691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374032680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1374032680}
+  progress: []
 --- !u!1001 &1375822678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86759,6 +87166,8 @@ GameObject:
   - component: {fileID: 1752102088}
   - component: {fileID: 1752102087}
   - component: {fileID: 1752102089}
+  - component: {fileID: 1752102090}
+  - component: {fileID: 1752102091}
   m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -86778,7 +87187,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -86914,6 +87323,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1752102090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752102080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1752102091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752102080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1752102080}
+  progress: []
 --- !u!43 &1758206491
 Mesh:
   m_ObjectHideFlags: 0
@@ -87094,6 +87538,8 @@ GameObject:
   - component: {fileID: 1758398098}
   - component: {fileID: 1758398097}
   - component: {fileID: 1758398099}
+  - component: {fileID: 1758398100}
+  - component: {fileID: 1758398101}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -87113,7 +87559,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -87249,6 +87695,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1758398100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758398090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1758398101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758398090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1758398090}
+  progress: []
 --- !u!1001 &1760915922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87346,6 +87827,8 @@ GameObject:
   - component: {fileID: 1772636763}
   - component: {fileID: 1772636762}
   - component: {fileID: 1772636764}
+  - component: {fileID: 1772636765}
+  - component: {fileID: 1772636766}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -87365,7 +87848,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -87501,6 +87984,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &1772636765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772636755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &1772636766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772636755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 1772636755}
+  progress: []
 --- !u!1 &1778079260
 GameObject:
   m_ObjectHideFlags: 0
@@ -105308,6 +105826,8 @@ GameObject:
   - component: {fileID: 2038456657}
   - component: {fileID: 2038456656}
   - component: {fileID: 2038456658}
+  - component: {fileID: 2038456659}
+  - component: {fileID: 2038456660}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -105327,7 +105847,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -105463,6 +105983,41 @@ MonoBehaviour:
   healthBarImage: {fileID: 1632344886}
   healthBarPivot: {fileID: 1710023277}
   hideFullHealthBar: 0
+--- !u!114 &2038456659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038456649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaOfEffectDistance: 1
+  damageRatioOverDistance:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  areaOfEffectColor: {r: 0.5, g: 0, b: 0, a: 0.5}
+--- !u!114 &2038456660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038456649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b564f1dee81b3043b2435ee94152739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAtStart: 0
+  renderTarget: {fileID: 2038456649}
+  progress: []
 --- !u!1001 &2041547763
 PrefabInstance:
   m_ObjectHideFlags: 0
