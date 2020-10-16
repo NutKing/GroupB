@@ -19,7 +19,8 @@ public class hiddenroom : MonoBehaviour
     public Transform robot;
     public GameObject robot1;
 
-    
+    public AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,7 @@ public class hiddenroom : MonoBehaviour
         {
             isOpen = true;
             timer = timerLength;
+            sound.Play();
         }
     }
 }
