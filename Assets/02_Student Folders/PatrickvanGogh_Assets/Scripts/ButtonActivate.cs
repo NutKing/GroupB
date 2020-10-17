@@ -6,14 +6,15 @@ public class ButtonActivate : MonoBehaviour
 {
     bool isOpen = false;
     bool opening = false;
-    
+    bool inArea = false;
 
     public float speed = 5;
     public float z = 2f;
 
     public Transform Door1;
     public Transform Door2;
-    public Transform GreenButton;
+    public Transform RedButton;
+    public AudioSource soundeffect;
 
     Vector3 Door1DefPos = new Vector3(0, 0, 0);
     Vector3 Door2DefPos = new Vector3(0, 0, 1.5f);
@@ -24,8 +25,20 @@ public class ButtonActivate : MonoBehaviour
         z += Door1.localPosition.z;
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        Actor check = collider.GetComponent<Actor>();
+        if (check == null) return;
+        inArea = true;
+    }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && inArea == true)
+        {
+            opening = true;
+            soundeffect.Play();
+            Debug.Log("Open Button Door");
+        }
         if (opening && Door1.localPosition.z < z)
         {
             Door1.Translate(Vector3.forward * Time.deltaTime * speed);
@@ -34,15 +47,6 @@ public class ButtonActivate : MonoBehaviour
         else if (opening)
         {
             opening = false;
-            // soundEffect.Stop();
         }
-       
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            opening = true;
-            Debug.Log("Open Button Door");
-        }
-
-
     }
 }
