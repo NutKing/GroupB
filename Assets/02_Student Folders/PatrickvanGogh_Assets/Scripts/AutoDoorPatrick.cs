@@ -24,7 +24,7 @@ public class AutoDoorPatrick : MonoBehaviour
     Vector3 Door1DefPos = new Vector3(0, 0, 0);
     Vector3 Door2DefPos = new Vector3(0, 0, 1.5f);
 
-    //public AudioSource soundeffect;
+
 
     void start()
     {
@@ -44,7 +44,6 @@ public class AutoDoorPatrick : MonoBehaviour
         else if (opening)
         {
             opening = false;
-         // soundEffect.Stop();
         }
         else if (closing && Door1.localPosition.z > Door1DefPos.z)
         {
@@ -56,7 +55,6 @@ public class AutoDoorPatrick : MonoBehaviour
             closing = false;
          //   Door1.localPosition = Door1DefPos;
          //   Door2.localPosition = Door2DefPos;
-         // soundEffect.Stop();
         }
     }
 
@@ -68,7 +66,6 @@ public class AutoDoorPatrick : MonoBehaviour
 
         if (!isOpen)
         {
-        //  soundEffect.Play();
             isOpen = true;
             opening = true;
             closing = false;
@@ -83,7 +80,6 @@ public class AutoDoorPatrick : MonoBehaviour
 
         if (isOpen)
         {
-         // soundEffect.Play();
             opening = false;
             closing = true;
             isOpen = false;
