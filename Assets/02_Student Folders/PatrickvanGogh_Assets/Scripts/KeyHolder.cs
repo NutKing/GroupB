@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyHolder : MonoBehaviour {
-        private List<Key.KeyType> keyList;
+    private List<Key.KeyType> keyList;
 
         private void Awake() {
         keyList = new List<Key.KeyType>();

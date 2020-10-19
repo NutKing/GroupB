@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
@@ -19,10 +18,10 @@ public class KeyDoor : MonoBehaviour
 
     public void OpenDoor()
     {
-            while (Door1.localPosition.z < z)
-        {
+        while (Door1.localPosition.z < z)
+            {
                 Door1.Translate(Vector3.forward * Time.deltaTime * speed);
                 Door2.Translate(-Vector3.forward * Time.deltaTime * speed);
             }
-    }
+        }
 }
