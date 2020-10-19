@@ -26,7 +26,6 @@ public class KeyHolder : MonoBehaviour {
     }
    
     private void OnTriggerEnter(Collider collider) {
-        Debug.Log("Pick up Key");
         Key key = collider.GetComponent<Key>();
         if (key != null) {
             AddKey(key.GetKeyType());
