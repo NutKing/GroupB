@@ -5,12 +5,12 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour, IDoor
 {
 
-    float speed = 3f;
+    float speed = 1.5f;
     bool isOpen = false;
 	bool opening = false;
 	bool closing = false;
     float timer;
-	float timerLength = 0.5f;
+	float timerLength = 1f;
 	Vector3 door1Default = new Vector3(0,0,0);
 	Vector3 door2Default = new Vector3(0,0,1.5f);
 	
@@ -57,15 +57,17 @@ public class DoorOpen : MonoBehaviour, IDoor
 	
 	public void OpenCloseDoor() {
 		if(!isOpen) {
+			doorSound.Play();
 			opening = true;
 			closing = false;
 			isOpen = true;
-			doorSound.Play();
+
 		} else {
+			doorSound.Play();
 			closing = true;
 			opening = false;
 			isOpen = false;
-			doorSound.Play();
+
 		}
 		timer = timerLength;
 		
