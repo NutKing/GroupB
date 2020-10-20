@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
 
     public UnityAction<float, GameObject> onDamaged;
     public UnityAction<float> onHealed;
+    public UnityEvent interactAction;
     public UnityAction onDie;
 
     public float currentHealth { get; set; }
@@ -84,6 +85,7 @@ public class Health : MonoBehaviour
             {
                 m_IsDead = true;
                 onDie.Invoke();
+                interactAction.Invoke();
             }
         }
     }

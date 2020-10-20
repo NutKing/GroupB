@@ -13,6 +13,7 @@ public class areaActivator : MonoBehaviour
     public float timer = 3.6f;
     public float speed = 3f;
     public AudioSource sound1;
+    public AudioSource sound2;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class areaActivator : MonoBehaviour
     void Update()
     {
         if (inRange2 && activated && timer > 0f) {
+            sound1.volume = Mathf.Lerp(0.6f, 0f, (3.6f - timer) / 3.6f);
             stairs.Translate(Vector3.up * Time.deltaTime * speed);
             timer -= Time.deltaTime;
         }
@@ -31,6 +33,7 @@ public class areaActivator : MonoBehaviour
             PlayerCC.maxSpeedOnGround = 6f;
             PlayerCC.maxSpeedInAir = 6f;
             sound1.Stop();
+            sound2.Play();
         }
     }
 
