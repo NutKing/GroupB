@@ -25,6 +25,7 @@ public class ElevatorDown : MonoBehaviour
     void Update()
     {
         if (goDown && timer > 0f) {
+            sound2.volume = Mathf.Lerp(0.2f, 0f, (17.4f - timer) / 17.4f);
             elevator.Translate(Vector3.down * Time.deltaTime * speed);
             timer -= Time.deltaTime;
         }
