@@ -12,11 +12,11 @@ public class Destroyable : MonoBehaviour {
     public Texture2D[] progress;
 
     private void Start() {
+        _material = renderTarget.GetComponent<Renderer>().material;
+
         _health = GetComponent<Health>();
         _health.onDamaged += OnDamaged;
         _health.onDie += OnDie;
-
-        _material = renderTarget.GetComponent<Renderer>().material;
 
         if (damageAtStart != 0f) {
             _health.TakeDamage(damageAtStart, gameObject);
