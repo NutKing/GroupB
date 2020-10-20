@@ -20,6 +20,7 @@ public class Fall : MonoBehaviour
             transform.Rotate((float)24, (float)40, 0);
             transform.position -= new Vector3(0, (float)3.9, 0);
             sound1.Play();
+            sound1.time = 4f;
             fall = false;
         }
     }

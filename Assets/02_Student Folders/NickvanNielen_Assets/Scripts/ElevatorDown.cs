@@ -14,6 +14,7 @@ public class ElevatorDown : MonoBehaviour
     public float speed = 2f;
 
     public AudioSource sound1;
+    public AudioSource sound2;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +30,21 @@ public class ElevatorDown : MonoBehaviour
         }
         if (timer <= 0f && playOnce) {
             playOnce = false;
+            sound2.Stop();
             sound1.Play();
+            sound1.time = 0.7f;
         }
     }
 
     public void moveDown() {
         goDown = !goDown;
+        if (goDown && playOnce) {
+            sound2.Play();
+            sound2.time = 1f;
+        }
+        else if (playOnce) {
+            sound2.Stop();
+        }
+        
     }
 }

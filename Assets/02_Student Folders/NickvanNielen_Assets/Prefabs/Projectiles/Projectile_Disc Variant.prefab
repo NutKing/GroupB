@@ -122,10 +122,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 3383
   speed: 20
-  gravityDownAcceleration: 10
+  gravityDownAcceleration: 5
   trajectoryCorrectionDistance: -1
   inheritWeaponVelocity: 0
-  damage: 10
+  damage: 5
   areaOfDamage: {fileID: 7789706356056857332}
   radiusColor: {r: 1, g: 0.5589783, b: 0, a: 0.49803922}
 --- !u!114 &7789706356056857332
