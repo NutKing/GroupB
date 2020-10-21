@@ -363,6 +363,11 @@ public class EnemyController : MonoBehaviour
             Instantiate(lootPrefab, transform.position, Quaternion.identity);
         }
 
+        if (gameObject.name == "Keeper Bot")
+        {
+            GetComponent<PKeeperDeath>().QueenCaptiveSaved.SetActive(true);
+        }
+
         // this will call the OnDestroy function
         Destroy(gameObject, deathDuration);
     }

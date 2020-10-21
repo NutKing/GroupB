@@ -9888,7 +9888,7 @@ GameObject:
   - component: {fileID: 3563263860166071605}
   - component: {fileID: 3173992036639564944}
   m_Layer: 0
-  m_Name: AllyBot (6)
+  m_Name: Queen
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15052,7 +15052,7 @@ GameObject:
   - component: {fileID: 1811263550}
   - component: {fileID: 1811263551}
   m_Layer: 0
-  m_Name: ObjectivePickupItem 1
+  m_Name: (P)ObjectivePickupItem 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
