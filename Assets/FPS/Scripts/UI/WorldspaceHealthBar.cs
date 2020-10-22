@@ -14,9 +14,11 @@ public class WorldspaceHealthBar : MonoBehaviour
 
     void Update()
     {
-        // update health bar value
-        healthBarImage.fillAmount = health.currentHealth / health.maxHealth;
-        
+        if (healthBarImage) {
+            // update health bar value
+            healthBarImage.fillAmount = health.currentHealth / health.maxHealth;
+        }
+
         // rotate health bar to face the camera/player
         healthBarPivot.LookAt(Camera.main.transform.position);
 
