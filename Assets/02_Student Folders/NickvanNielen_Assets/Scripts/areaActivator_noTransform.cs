@@ -8,9 +8,9 @@ public class areaActivator_noTransform : MonoBehaviour
     private bool activated = false;
     private bool disabled = false;
     public GameObject Player2;
+    public AudioSource sound1;
     public PlayerCharacterController PlayerCC;
     public float timer = 8.6f;
-    // public AudioSource sound1;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,9 @@ public class areaActivator_noTransform : MonoBehaviour
         }
         if (inRange2 && activated && timer <= 0f) {
             activated = false;
+            sound1.Play();
             PlayerCC.maxSpeedOnGround = 6f;
             PlayerCC.maxSpeedInAir = 6f;
-            // sound1.Play();
         }
         if(activated) {
             PlayerCC.maxSpeedOnGround = 0.0001f;

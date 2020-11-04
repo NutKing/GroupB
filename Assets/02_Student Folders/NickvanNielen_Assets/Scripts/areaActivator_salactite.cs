@@ -14,6 +14,7 @@ public class areaActivator_salactite : MonoBehaviour
     public float speed = 20f;
     public AudioSource sound1;
     public AudioSource sound2;
+    public AudioSource sound3;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class areaActivator_salactite : MonoBehaviour
             PlayerCC.maxSpeedInAir = 6f;
             sound1.Stop();
             sound2.Play();
+            sound2.time = 0.3f;
         }
     }
 
@@ -41,6 +43,8 @@ public class areaActivator_salactite : MonoBehaviour
             inRange2 = true;
             if(activated) {
                 sound1.Play();
+                sound3.Play();
+                sound1.time = 1f;
                 PlayerCC.maxSpeedOnGround =  0.0001f;
                 PlayerCC.maxSpeedInAir = 0.0001f;
             }
